@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+block content
+  h4= debug
+  pre #{debug}
+
+block content
+  <div style="box-sizing: border-box;">
+    <form method="post">
+      <div style="float:left; width:50%; min-height:300px">
+        <div style="margin-bottom: 15px">
+          <label>Screen Name </label>
+          <input style="width: 100%;" type="text" name="screenName" value="#{screenName}" />
+        </div>
+        <div style="margin-bottom: 15px">
+          <label>JSX Header</label>
+          <textarea style="width: 100%; min-height:300px;" name="headerJSX">#{headerJSX}</textarea>
+        </div>
+      </div>
+      <div style="float:right; width:50%; min-height:300px; padding: 0 15px;">
+        <div style="margin-bottom: 15px">
+          <label>Screen Icon Url </label>
+          <input style="width: 100%;" type="text" name="screenIcon" />
+        </div>
+        <div style="margin-bottom: 15px">
+          <label>JSX View</label>
+          <textarea style="width: 100%; min-height:300px;" name="viewJSX">#{viewJSX}</textarea>
+        </div>
+      </div>
+      <div style="padding-bottom: 15px; clear:both;">
+        <label>States</label>
+          <textarea style="width: 100%; min-height:300px;" name="state">#{state}</textarea>
+      </div>
+      <button type="submit" value="OK">Convert</button>
+    </form>
+    <div style="padding-top: 15px; clear:both;">
+      <div style="margin-bottom: 15px">
+        <label>JSON Result</label>
+        <textarea style="width: 100%; min-height:300px;" name="json">#{json}</textarea>
+      </div>
+      <div style="margin-bottom: 15px">
+        <label>JSON String Result</label>
+        <textarea style="width: 100%; min-height:300px;" name="string">#{stringify}</textarea>
+      </div>
+    </div>
+  </div>
